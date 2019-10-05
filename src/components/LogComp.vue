@@ -13,7 +13,11 @@
                 <div class="welcome px-4">
                   <h3 class="font-weight-bold">Sign In</h3>
                 </div>
-                <img src="../assets/img/sign-in.svg" class="d-block w-100 sign-pic" alt="sign-pic" />
+                <img
+                  src="../assets/img/sign-in.svg"
+                  class="d-block w-100 sign-pic"
+                  alt="sign-pic"
+                />
                 <!-- form -->
                 <form @submit.prevent="login">
                   <div class="form-group">
@@ -34,10 +38,17 @@
                     />
                   </div>
                   <div class="form-group mb-0">
-                    <button type="submit" class="btn btn-primary w-100 shadow rounded-pill">Sign In</button>
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100 shadow rounded-pill"
+                    >
+                      Sign In
+                    </button>
                     <span class="m-2">
                       Or
-                      <router-link to="/auth/register" class="m-2">Create new account.</router-link>
+                      <router-link to="/auth/register" class="m-2"
+                        >Create new account.</router-link
+                      >
                     </span>
                   </div>
                 </form>

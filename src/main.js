@@ -11,26 +11,21 @@ import "tailwindcss/dist/utilities.min.css";
 import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import moment from "moment";
-
+import WOW from "wow.js";
 
 Vue.config.productionTip = false;
 window.firebase = firebase;
-window.moment = moment
+window.moment = moment;
+window.WOW = WOW;
+new WOW().init();
 let app;
 
 var firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: ""
+  
 };
 firebase.initializeApp(firebaseConfig);
 
-firebase.auth().onAuthStateChanged(function () {
+firebase.auth().onAuthStateChanged(function() {
   if (!app) {
     app = new Vue({
       router,

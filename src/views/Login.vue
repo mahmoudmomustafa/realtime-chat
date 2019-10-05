@@ -2,10 +2,10 @@
   <div class="container">
     <div class="wel d-flex justify-content-center align-items-center">
       <!-- error -->
-      <div class="toast" v-for="err in errors" :key="err" @click="close()">
-        <div class="toast-body" v-text="err"></div>
+      <div class="toast position-absolute" v-for="err in errors" :key="err" @click="close()">
+        <div class="toast-body position-relative" v-text="err"></div>
       </div>
-      <div class="col-10 col-md-7 col-lg-5">
+      <div class="col-12 col-md-7 col-lg-5 wow fadeIn">
         <div class="card">
           <div id="Indicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner p-4">
@@ -37,7 +37,7 @@
                     <button type="submit" class="btn btn-primary w-100 shadow rounded-pill">Sign In</button>
                     <span class="m-2">
                       Or
-                      <router-link to="/auth/register" class="m-2">Create new account.</router-link>
+                      <router-link to="/register" class="m-2">Create new account.</router-link>
                     </span>
                   </div>
                 </form>
@@ -82,6 +82,11 @@ export default {
             this.errors.push(error.message);
           });
       }
+    },
+    error() {
+      setTimeout(() => {
+        // this.errors = [];
+      }, 15000);
     }
   }
 };
@@ -92,7 +97,6 @@ export default {
 .wel {
   position: relative;
   height: 100vh;
-  background: #ecf2ff;
   font-family: "Mansalva", cursive;
   .card {
     border: 0;
@@ -108,17 +112,31 @@ export default {
     }
   }
 }
+.toasts {
+  top: 5%;
+  right: 0;
+}
 .toast {
-  position: absolute;
   top: 5%;
   right: 0px;
   opacity: 1;
   min-width: 240px;
+  max-width: 300px;
   background: #ff5555;
   box-shadow: 0 0 5px #ff5555;
   color: white;
   z-index: 1;
+  font-family: sans-serif;
   animation: fade-in-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  .toast-body::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: black;
+    top: 0;
+    right: 0;
+  }
 }
 @keyframes fade-in-right {
   0% {

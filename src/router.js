@@ -13,11 +13,11 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [{
       path: "*",
-      redirect: "/auth",
+      redirect: "/chat"
     },
     {
       path: "/",
-      redirect: "/auth",
+      redirect: "/auth"
     },
     {
       path: "/auth",
@@ -49,7 +49,7 @@ const router = new Router({
       meta: {
         requiresAuth: true
       }
-    },
+    }
   ]
 });
 

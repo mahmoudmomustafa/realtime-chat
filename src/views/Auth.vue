@@ -1,22 +1,31 @@
 <template>
   <div class="container">
     <div class="wel d-flex justify-content-center align-items-center">
-      <div class="col-10 col-md-7 col-lg-5">
+      <div class="col-12 col-md-7 col-lg-5 wow fadeIn">
         <div class="card">
           <div id="Indicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner px-4 pt-4">
               <div class="carousel-item first-item active">
-                <img src="../assets/img/hm.svg" class="d-block w-100" alt="hm-pic" />
+                <img
+                  src="../assets/img/hm.svg"
+                  class="d-block w-100 wow fadeInUp"
+                  alt="hm-pic"
+                  data-wow-duration="2s" data-wow-delay="0s"
+                />
                 <div
                   class="welcome text text-center d-flex justify-content-center align-items-center"
                 >
-                  <h3 class="font-weight-bold">Haaa !!</h3>
+                  <h3 class="font-weight-bold wow heartBeat" data-wow-duration="2s" data-wow-delay="2s">Haaa !!</h3>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="../assets/img/welcome-2.svg" class="d-block w-100" alt="wel-pic" />
+                <img
+                  src="../assets/img/welcome-2.svg"
+                  class="d-block w-100 wow flipInX" data-wow-duration="1s" data-wow-delay="0s"
+                  alt="wel-pic"
+                />
                 <div
-                  class="welcome text text-center d-flex justify-content-center align-items-center flex-column"
+                  class="welcome text text-center d-flex justify-content-center align-items-center flex-column wow zoomInDown" data-wow-duration="1s" data-wow-delay="0s"
                 >
                   <h4 class="font-weight-bold">Waait wait wait..</h4>
                   <h3 class="font-weight-bold">Hi!</h3>
@@ -24,9 +33,13 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="../assets/img/ready.svg" class="d-block w-100" alt="ready-pic" />
+                <img
+                  src="../assets/img/ready.svg"
+                  class="d-block w-100 wow slideInDown" data-wow-duration="1s" data-wow-delay="0s"
+                  alt="ready-pic"
+                />
                 <div
-                  class="welcome text text-center d-flex justify-content-center align-items-center flex-column"
+                  class="welcome text text-center d-flex justify-content-center align-items-center flex-column wow fadeIn" data-wow-duration="1s" data-wow-delay="1s"
                 >
                   <h3 class="font-weight-bold mb-3">Ready to try it?!</h3>
                   <div
@@ -35,19 +48,27 @@
                     <router-link to="/register">
                       <button
                         class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold py-2 px-4 border-0 hover:border-transparent rounded-full"
-                      >Sign Up</button>
+                      >
+                        Sign Up <i class="fas fa-user-plus"></i>
+                      </button>
                     </router-link>
                     <router-link to="/login">
                       <button
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                      >Sign In</button>
+                      >
+                        Sign In <i class="fas fa-sign-in-alt"></i>
+                      </button>
                     </router-link>
                   </div>
                 </div>
               </div>
             </div>
             <ol class="carousel-indicators position-relative">
-              <li data-target="#Indicators" data-slide-to="0" class="active"></li>
+              <li
+                data-target="#Indicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
               <li data-target="#Indicators" data-slide-to="1"></li>
               <li data-target="#Indicators" data-slide-to="2"></li>
             </ol>
@@ -93,7 +114,6 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Mansalva&display=swap");
 .wel {
   height: 100vh;
-  background: #ecf2ff;
   font-family: "Mansalva", cursive;
   .card {
     border: 0;
